@@ -20,7 +20,7 @@ store.dispatch(setTextFilter('gas'));
 //console.log(store.getState());
 
 setTimeout(() => {
-    store.dispatch(setTextFilter('bill'));
+    store.dispatch(setTextFilter(''));
 })
 
 //store.subscribe(() => {
