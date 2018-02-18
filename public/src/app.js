@@ -6,6 +6,7 @@ import configureStore from './store/configureStore';
 import { addExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
+import getExpensesTotal from './selectors/expenses-total';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -29,6 +30,8 @@ setTimeout(() => {
     console.log(visibleExpenses);
 //})
 
+    const ExpensesTotal = getExpensesTotal(state.expenses);
+    console.log('Total',ExpensesTotal);
 const jsx = (
     <Provider store={store}>
         <AppRouter />
