@@ -11,13 +11,15 @@ import getExpensesTotal from './selectors/expenses-total';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import { setTimeout } from 'timers';
+import './firebase/firebase';
+//import './playground/promises';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'Water Bill', amount: 4500}))
-store.dispatch(addExpense({ description: 'Gas Bill', createdAt: 1000 }))
-store.dispatch(addExpense({ description: 'Electric Bill', amount: 109500}))
-store.dispatch(setTextFilter('gas'));
+//store.dispatch(addExpense({ description: 'Water Bill', amount: 4500}))
+//store.dispatch(addExpense({ description: 'Gas Bill', createdAt: 1000 }))
+//store.dispatch(addExpense({ description: 'Electric Bill', amount: 109500}))
+//store.dispatch(setTextFilter('gas'));
 //console.log(store.getState());
 
 setTimeout(() => {
@@ -30,8 +32,8 @@ setTimeout(() => {
     console.log(visibleExpenses);
 //})
 
-    const ExpensesTotal = getExpensesTotal(state.expenses);
-    console.log('Total',ExpensesTotal);
+  //  const ExpensesTotal = getExpensesTotal(state.expenses);
+   // console.log('Total',ExpensesTotal);
 const jsx = (
     <Provider store={store}>
         <AppRouter />
